@@ -8,4 +8,10 @@ if (!String.prototype.format) {
         ;
       });
     };
-  }
+}
+
+function test() {
+  console.log("hello");
+}
+
+module.exports = test
