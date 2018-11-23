@@ -23,7 +23,8 @@ module.exports = (robot) => {
             let endpoint = ENDPOINT_WHERE.format(where, page);
             if (where === "荃灣廣場") {
                 return ENDPOINT_LANDMARK.format(PARAM_DISTRICT_ID, PARAM_LANDMARK_ID, page);
-            } 
+            }
+            return endpoint;
         })
         .then(result => res.send(formatSlackMessage("Here are today's suggestions", result)))
         .catch(err => {
